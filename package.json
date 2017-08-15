@@ -1,7 +1,7 @@
 {
   "name": "react-web-dom",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "this is react-web flex dom",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,10 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/xuanheScript/react-web-dom.git"
   },
-  "author": "",
+  "author": "煊赫Script",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/xuanheScript/react-web-dom/issues"
   },
-  "homepage": "https://github.com/xuanheScript/react-web-dom#readme"
+  "homepage": "https://github.com/xuanheScript/react-web-dom#readme",
+  "keywords": [
+    "lijie123"
+  ]
 }
