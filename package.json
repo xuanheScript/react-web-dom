@@ -2,9 +2,10 @@
   "name": "react-web-dom",
   "version": "1.0.1",
   "description": "this is react-web flex dom",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "babel --presets react -d lib/ src/"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,15 @@
   "homepage": "https://github.com/xuanheScript/react-web-dom#readme",
   "keywords": [
     "lijie123"
-  ]
+  ],
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-espower": "^2.3.2",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babelify": "^7.3.0"
+  }
 }
