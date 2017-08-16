@@ -1,6 +1,6 @@
 {
   "name": "react-web-dom",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "description": "this is react-web flex dom",
   "main": "lib/index.js",
   "scripts": {
@@ -29,5 +29,8 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "babelify": "^7.3.0"
+  },
+  "dependencies": {
+    "react-inline": "^0.8.2"
   }
 }

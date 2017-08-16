@@ -18,8 +18,8 @@ export class View extends React.Component {
         return (
             <div
                 {...this.props}
-                className={`${styles.View} ${this.props.className}`}
-                style = {this.props.style}
+                className={`${this.props.className}`}
+                style = {Object.assign({},styles.View,this.props.style)}
             >
                 {this.props.children}
             </div>
@@ -41,8 +41,8 @@ export class Text extends React.Component {
         return (
             <span
                 {...this.props}
-                className={`${styles.Text} ${this.props.className}`}
-                style = {this.props.style}
+                className={`${this.props.className}`}
+                style = {Object.assign({},styles.Text,this.props.style)}
             >
                 {this.props.children}
             </span>
@@ -63,8 +63,8 @@ export class ScrollView extends React.Component {
     render() {
         return (
             <div
-              className={`${styles.ScrollView} ${this.props.className}`}
-              style = {this.props.style}
+              className={`${this.props.className}`}
+              style = {Object.assign({},styles.ScrollView,this.props.style)}
             >
               {this.props.children}
             </div>
