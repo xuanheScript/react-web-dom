@@ -1,5 +1,6 @@
-import React,{PropTypes,Component} from 'react';
+import React,{Component} from 'react';
 import StyleSheet from 'react-inline';
+import PropTypes from 'prop-types';
 
 const windowHeight = window.innerHeight;
 const windowWidth = window.innerWidth;
@@ -112,6 +113,6 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
         flexDirection: 'column',
         overflow: 'scroll',
-        '-webkit-overflow-scrolling' : 'touch'
+        WebkitOverflowScrolling : 'touch'
     }
 })
