@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import StyleSheet from 'react-inline';
 import PropTypes from 'prop-types';
+import styles from './style/index.css';
 
 const windowHeight = window.innerHeight;
 const windowWidth = window.innerWidth;
@@ -19,8 +20,8 @@ export class View extends React.Component {
         return (
             <div
                 {...this.props}
-                className={`${this.props.className}`}
-                style = {Object.assign({},styles.View,this.props.style)}
+                className={`${styles.View} ${this.props.className}`}
+                style = {this.props.style}
             >
                 {this.props.children}
             </div>
@@ -42,8 +43,8 @@ export class Text extends React.Component {
         return (
             <span
                 {...this.props}
-                className={`${this.props.className}`}
-                style = {Object.assign({},styles.Text,this.props.style)}
+                className={`${styles.Text} ${this.props.className}`}
+                style = {this.props.style}
             >
                 {this.props.children}
             </span>
@@ -64,8 +65,8 @@ export class ScrollView extends React.Component {
     render() {
         return (
             <div
-              className={`${this.props.className}`}
-              style = {Object.assign({},styles.ScrollView,this.props.style)}
+              className={`${styles.ScrollView} ${this.props.className}`}
+              style = {this.props.style}
             >
               {this.props.children}
             </div>
@@ -94,25 +95,3 @@ export class ViewMax extends React.Component {
         )
     }
 }
-
-
-
-const styles = StyleSheet.create({
-    View : {
-        display: 'flex',
-        alignItems: 'initial',
-        justifyContent: 'flex-start',
-        flexDirection: 'column',
-    },
-    Text : {
-        margin : 0
-    },
-    ScrollView : {
-        display : 'flex',
-        alignItems: 'initial',
-        justifyContent: 'flex-start',
-        flexDirection: 'column',
-        overflow: 'scroll',
-        WebkitOverflowScrolling : 'touch'
-    }
-})
