@@ -1,6 +1,6 @@
 {
   "name": "react-web-dom",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "description": "this is react-web flex dom",
   "main": "lib/index.js",
   "scripts": {

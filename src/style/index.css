@@ -12,12 +12,17 @@
     flex-direction: column;
 }
 .ScrollView{
-  display: flex;
   align-items: initial;
   justify-content: flex-start;
   flex-direction: column;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
+}
+.flex{
+    display: flex;
+}
+.block{
+    display: block;
 }
 .NavigationBar{
   background-color: #fff!important;

@@ -57,20 +57,50 @@ export class ScrollView extends React.Component {
     static propTypes = {
         className: PropTypes.string,
         style: PropTypes.object,
+        block: PropTypes.bool,
     };
     static defaultProps = {
         className : '',
         style : undefined,
+        block: false,
     };
     render() {
+        const {block} = this.props
         return (
             <div
-              className={`${styles.ScrollView} ${this.props.className}`}
-              style = {this.props.style}
+                className={`${styles.ScrollView} ${block?styles.block:styles.flex} ${this.props.className}`}
+                style = {this.props.style}
+                ref = {(e)=>{
+                    if(e){
+                        this.ScrollView=e
+                    }
+                }}
             >
-              {this.props.children}
+                {this.props.children}
             </div>
         )
+    }
+    scrollTopTo(e){
+        this.ScrollView.scrollTop = e
+    }
+    getLayout(){
+        const {
+            scrollHeight,
+            scrollWidth,
+            offsetHeight,
+            scrollTop,
+        } = this.ScrollView
+        return{
+            height: scrollHeight,
+            width: scrollWidth,
+            offsetHeight,
+            scrollTop,
+        }
+    }
+    log(){
+        console.log({
+            'ScrollView' : this.ScrollView
+        })
     }
 }
 
